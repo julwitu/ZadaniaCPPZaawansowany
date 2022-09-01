@@ -15,5 +15,7 @@ void StringCensor::addCensoredLetter(char c)
 
 std::string StringCensor::censor(std::string &str)
 {
-	std::replace_if(str.begin(), str.end(), containsCensoredLetter, '*');
+	auto lambda = [this](char c) {return this->containsCensoredLetter(c); };
+	std::replace_if(str.begin(), str.end(), lambda, '*');
+	return str;
 }

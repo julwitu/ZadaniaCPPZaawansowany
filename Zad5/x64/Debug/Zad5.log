@@ -1,5 +1,4 @@
 ﻿  main.cpp
   StringCensor.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad5\StringCensor.cpp(18,64): error C3867: 'StringCensor::containsCensoredLetter': non-standard syntax; use '&' to create a pointer to member
-C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad5\StringCensor.cpp(18,7): error C2672: 'std::replace_if': no matching overloaded function found
   Generating Code...
+  Zad5.vcxproj -> C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\x64\Debug\Zad5.exe
