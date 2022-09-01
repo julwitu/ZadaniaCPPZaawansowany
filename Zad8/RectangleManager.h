@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "RectangleGenerator.h"
 //Zadanie 8
 //Klasy: Rectangle(przechowuje d³ugoœci boków, wylicza pole, isSquare()), RectangleGenerator(Klasa genreuj¹ca losowy prostok¹t o boku z podanego przedzia³u), RectangleManger(tutaj faktycznie implementujemy zadania)
 //Utwórz wektor 100 prostok¹tów o losowych d³ugoœciach boków z przedzia³u 0, 10 (u¿yj liczb ca³kowitych)
@@ -11,10 +12,12 @@
 
 class RectangleManager
 {
+	std::vector<Rectangle> rectangles;
 public:
+	RectangleManager();
 	void printRectangles();
-	size_t countRectangleBiggerThen(int area);
-	std::vector <Rectangle> copyRectangles;
+	size_t countRectangleBiggerThen(int minArea);
+	std::vector <Rectangle> copyRectangles();
 	void sortAreaDescending();
 	void deleteInvalid();
 

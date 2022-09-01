@@ -9,8 +9,8 @@ int RectangleGenerator::randomNumbersGenerator()
         return dist(randomEngine);
 }
 
-RectangleGenerator::RectangleGenerator()
+RectangleGenerator::RectangleGenerator() 
 {
-    a = randomNumbersGenerator();
-    b = randomNumbersGenerator();
+    Rectangle::a = randomNumbersGenerator();
+    Rectangle::b = randomNumbersGenerator();
 }

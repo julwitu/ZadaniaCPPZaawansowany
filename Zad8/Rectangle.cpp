@@ -9,3 +9,13 @@ bool Rectangle::isSquare()
 {
 	return a == b;
 }
+
+int Rectangle::getA()
+{
+	return a;
+}
+
+int Rectangle::getB()
+{
+	return b;
+}

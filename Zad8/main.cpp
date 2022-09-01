@@ -6,3 +6,18 @@
 //c) std::vector copyRectangles() - Przekopiuj wszystkie prostk¹ty, które s¹ kwadratami do drugiego vectora(copy_if) i go wypisz(for_each)
 //d) void sortAreaDescending() - Posortuj vector prostok¹tów malejaco wed³ug pola powierzchni
 //e) void deleteInvalid() Usuñ wszystkie prostok¹ty, które maj¹ przynajmniej jeden bok równy 0
+#include "RectangleManager.h"
+#include <iostream>
+int main() {
+	RectangleManager rect;
+	rect.printRectangles();
+	std::cout << "Bigger than 50: ";
+	std::cout << rect.countRectangleBiggerThen(50);
+	std::cout << std::endl << "Squares " << std::endl;
+	rect.copyRectangles();
+	std::cout << std::endl;
+	std::cout << "Posortowane " << std::endl;
+	rect.sortAreaDescending();
+	std::cout << "Usuniete 0: " << std::endl;
+	rect.deleteInvalid();
+}

@@ -11,9 +11,12 @@
 
 class Rectangle
 {
+protected:
 	int a, b;
 public:
 	int area();
 	bool isSquare();
+	int getA();
+	int getB();
 };
 
