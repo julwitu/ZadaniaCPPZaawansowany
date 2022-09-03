@@ -24,7 +24,7 @@ public:
 	BigInt(const BigInt& other);
 	BigInt& operator=(const BigInt& other);
 	void toString();
-	BigInt& operator+(const BigInt& bigInt);
+	BigInt& operator+(BigInt bigInt);
 	BigInt operator*(const BigInt& bigInt);
 	BigInt operator/(const BigInt& bigInt);
 	BigInt operator%(const BigInt & bigInt);

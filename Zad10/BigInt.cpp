@@ -28,19 +28,25 @@ void BigInt::toString()
 	std::for_each(numbers.begin(), numbers.end(), [](int i) {std::cout << i; });
 }
 
-BigInt& BigInt::operator+(const BigInt & bigInt)
+BigInt& BigInt::operator+(BigInt bigInt)
 {
-	int findBigger = std::max(bigInt.numbers.size(), numbers.size());
-	for(int i=findBigger; i >0; i--){
-		if (numbers[i] + bigInt.numbers[i] < 10) {
-			numbers[i] += bigInt.numbers[i];
-		}
-		else {
-			numbers[i] = (numbers[i] + bigInt.numbers[i]) % 10;
-			numbers[i - 1] += (numbers[i] + bigInt.numbers[i]) % 10;
-		}
-	}
 	std::reverse(numbers.begin(), numbers.end());
+	std::reverse(bigInt.numbers.begin(), bigInt.numbers.end());
+	int findBigger = std::max(bigInt.numbers.size(), numbers.size());
+	std::vector<short int> temp;
+	for (int i = 0; i < findBigger; i++) {
+		
+			if (numbers[i] + bigInt.numbers[i] < 10) {
+				temp.push_back(numbers[i] + bigInt.numbers[i]);
+			}
+			else {
+				temp.push_back((numbers[i] + bigInt.numbers[i]) % 10);
+				temp.push_back((numbers[i] + bigInt.numbers[i]) / 10);
+			}
+
+	}
+	numbers.clear();
+	std::copy(temp.rbegin(), temp.rend(), std::back_inserter(numbers));
 	return *this;
 }
 
