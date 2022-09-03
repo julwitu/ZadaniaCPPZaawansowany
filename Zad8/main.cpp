@@ -9,7 +9,7 @@
 #include "RectangleManager.h"
 #include <iostream>
 int main() {
-	RectangleManager rect;
+	RectangleManager rect(0,10);
 	rect.printRectangles();
 	std::cout << "Bigger than 50: ";
 	std::cout << rect.countRectangleBiggerThen(50);

@@ -1,5 +1,11 @@
 #include "Rectangle.h"
 
+Rectangle::Rectangle(int a, int b)
+{
+	this->a = a;
+	this->b = b;
+}
+
 int Rectangle::area()
 {
 	return a*b;

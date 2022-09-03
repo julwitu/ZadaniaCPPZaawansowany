@@ -14,7 +14,7 @@ class RectangleManager
 {
 	std::vector<Rectangle> rectangles;
 public:
-	RectangleManager();
+	RectangleManager(int min, int max);
 	void printRectangles();
 	size_t countRectangleBiggerThen(int minArea);
 	std::vector <Rectangle> copyRectangles();

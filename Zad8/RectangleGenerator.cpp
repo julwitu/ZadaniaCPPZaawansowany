@@ -1,16 +1,17 @@
 #include "RectangleGenerator.h"
 #include <random>
 
-int RectangleGenerator::randomNumbersGenerator()
+RectangleGenerator::RectangleGenerator(int min, int max):
+	_min(min),
+	_max(max)
 {
-        std::random_device randomDevice;
-        std::default_random_engine randomEngine(randomDevice());
-        std::uniform_int_distribution<int> dist(0, 10);
-        return dist(randomEngine);
+
 }
 
-RectangleGenerator::RectangleGenerator() 
+Rectangle RectangleGenerator::generate()
 {
-    Rectangle::a = randomNumbersGenerator();
-    Rectangle::b = randomNumbersGenerator();
+    std::random_device randomDevice;
+    std::default_random_engine randomEngine(randomDevice());
+    std::uniform_int_distribution<int> dist(_min, _max);
+    return Rectangle(dist(randomEngine), dist(randomEngine));
 }

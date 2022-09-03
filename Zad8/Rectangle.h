@@ -14,6 +14,7 @@ class Rectangle
 protected:
 	int a, b;
 public:
+	Rectangle(int a, int b);
 	int area();
 	bool isSquare();
 	int getA();

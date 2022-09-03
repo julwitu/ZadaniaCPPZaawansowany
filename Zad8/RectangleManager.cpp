@@ -6,10 +6,11 @@ void printRect(Rectangle& rect) {
 }
 
 
-RectangleManager::RectangleManager()
+RectangleManager::RectangleManager(int min, int max)
 {
+	RectangleGenerator rectGen(min, max);
 	for (int i = 0; i < 100; i++) {
-		rectangles.push_back(RectangleGenerator());
+		rectangles.push_back(rectGen.generate());
 	}
 }
 

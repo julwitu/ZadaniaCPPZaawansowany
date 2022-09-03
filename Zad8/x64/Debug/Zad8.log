@@ -1,3 +1,7 @@
-﻿  RectangleManager.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad8\RectangleManager.cpp(23,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+﻿  main.cpp
+  Rectangle.cpp
+  RectangleGenerator.cpp
+  RectangleManager.cpp
+C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad8\RectangleManager.cpp(24,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  Generating Code...
   Zad8.vcxproj -> C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\x64\Debug\Zad8.exe
