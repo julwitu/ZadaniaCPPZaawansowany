@@ -1,5 +1,5 @@
 #include "CesarCode.h"
-
+//do poprawienia
 std::string CesarCode::cypher(std::string str, int secretValue)
 {
     std::string newStr;
