@@ -9,7 +9,7 @@
 
 int main() {
 	CesarCode code;
-	std::cout << code.cypher("julia", 3);
+	std::cout << code.cypher("julia", 65);
 	std::cout << std::endl;
 	std::cout << code.decepher("mxold", 3);
 }
