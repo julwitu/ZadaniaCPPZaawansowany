@@ -33,6 +33,15 @@
     <ClInclude Include="EmployeeCSVWriter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EmployeeJSONReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeeJSONWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmployeeWriter.cpp">
@@ -48,6 +57,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeJSONReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeJSONWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

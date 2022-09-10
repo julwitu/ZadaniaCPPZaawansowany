@@ -1,19 +1,19 @@
 {
-    "adres": {
-        "numer": 15,
-        "ulica": "D.Balaciart"
-    },
     "imie": "Julia",
+    "nazwisko": "Witucka",
     "list": [
         1,
         0,
         2
     ],
-    "nazwisko": "Witucka",
-    "obcnosc": true,
     "praca": {
-        "most": "pracownik",
-        "sda": "student"
+        "sda": "student",
+        "most": "pracownik"
     },
-    "wiek": 27
+    "wiek": 27,
+    "adres": {
+        "ulica": "D.Balaciart",
+        "numer": 15
+    },
+    "obcnosc": true
 }

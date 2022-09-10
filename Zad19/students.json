@@ -1,0 +1,20 @@
+{
+    "Students": [
+        {
+            "firstName": "Sean",
+            "lastName": "Brown"
+        },
+        {
+            "firstName": "Drake",
+            "lastName": "Williams"
+        },
+        {
+            "firstName": "Tom",
+            "lastName": "Miller"
+        },
+        {
+            "firstName": "Peter",
+            "lastName": "Jonson"
+        }
+    ]
+}

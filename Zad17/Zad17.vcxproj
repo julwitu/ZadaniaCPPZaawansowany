@@ -142,13 +142,18 @@
     <ClInclude Include="Employee.h" />
     <ClInclude Include="EmployeeCSVReader.h" />
     <ClInclude Include="EmployeeCSVWriter.h" />
+    <ClInclude Include="EmployeeJSONReader.h" />
+    <ClInclude Include="EmployeeJSONWriter.h" />
     <ClInclude Include="EmployeeManager.h" />
     <ClInclude Include="EmployeeReader.h" />
     <ClInclude Include="EmployeeWriter.h" />
+    <ClInclude Include="json.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmployeeCSVReader.cpp" />
     <ClCompile Include="EmployeeCSVWriter.cpp" />
+    <ClCompile Include="EmployeeJSONReader.cpp" />
+    <ClCompile Include="EmployeeJSONWriter.cpp" />
     <ClCompile Include="EmployeeManager.cpp" />
     <ClCompile Include="EmployeeWriter.cpp" />
     <ClCompile Include="main.cpp" />

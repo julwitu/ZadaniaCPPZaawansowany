@@ -1,2 +1,14 @@
 ﻿  EmployeeManager.cpp
-  Zad17.vcxproj -> C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\x64\Debug\Zad17.exe
+C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(54,18): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(53,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(511,1): error C2451: a conditional expression of type 'void' is not valid
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(511,18): message : Expressions of type void cannot be converted to other types
+C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(55): message : see reference to function template instantiation '__int64 std::count_if<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,EmployeeManager::calculateFirstNameStarting::<lambda_eb55d1929c2b7128e54ce46e84b315cc>>(_InIt,_InIt,_Pr)' being compiled
+          with
+          [
+              _Ty=Employee,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Employee>>>,
+              _Pr=EmployeeManager::calculateFirstNameStarting::<lambda_eb55d1929c2b7128e54ce46e84b315cc>
+          ]
+  main.cpp
+  Generating Code...

@@ -30,5 +30,28 @@ void EmployeeManager::generateLogin()
 	};
 
 	std::for_each(employees.begin(), employees.end(), addLogin);
+}
 
+void EmployeeManager::generatePassword()
+{
+//passwordLength: Wylosuj docelow¹ iloœæ znaków has³a 8 - 12 (stworz zmienna pomocnicz¹ charLeft = passwordLength)
+//smallLetterCount : Wylosuj ile ma byc ma³ych liter(od 1 do passwordLength - 4) (charLeft -= smallLetterCount)
+//capitalLetterCount : Wylosuj ile ma byc duzych liter(od 1 do charLeft - 3) (charLeft -= capitalLetterCount)
+//numbersCount : Wylosuj ile ma byc liczb(od 1 do charLeft - 2) (charLeft -= numbersCount)
+//specialCharCount zawsze bêdzie równe charLeft
+//Wylosowac znaki i dodac je do tymczasowego stringa
+//przemieszac stringa(std::shuffle)
+}
+
+void EmployeeManager::saveToFile(std::string filePath)
+{
+	_fileWriter->writeEmployees(employees, filePath);
+}
+
+int EmployeeManager::calculateFirstNameStarting(char firstLetter)
+{
+	int counter = std::count_if(employees.begin(), employees.end(), [&firstLetter](Employee e) {
+		e.getName()[0] == firstLetter;
+		});
+	return counter;
 }
