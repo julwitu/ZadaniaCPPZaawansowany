@@ -2,6 +2,7 @@
 #include <vector>
 #include <memory>
 #include <map>
+#include <set>
 #include <algorithm>
 #include <iostream>
 #include "Employee.h"
@@ -20,5 +21,6 @@ public:
 	void generatePassword();
 	void saveToFile(std::string filePath);
 	int calculateFirstNameStarting(char firstLetter);
+	std::set<std::string> calculateUniqueNames();
 };
 

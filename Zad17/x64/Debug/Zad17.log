@@ -1,14 +1,18 @@
 ﻿  EmployeeManager.cpp
-C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(54,18): warning C4553: '==': result of expression not used; did you intend '='?
 C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(53,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(511,1): error C2451: a conditional expression of type 'void' is not valid
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(511,18): message : Expressions of type void cannot be converted to other types
-C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(55): message : see reference to function template instantiation '__int64 std::count_if<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,EmployeeManager::calculateFirstNameStarting::<lambda_eb55d1929c2b7128e54ce46e84b315cc>>(_InIt,_InIt,_Pr)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(1402,1): error C2451: a conditional expression of type 'std::string' is not valid
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(1402,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\jwitu\OneDrive\Pulpit\SDA\CPPZaawansowanyCw\Zad17\EmployeeManager.cpp(63): message : see reference to function template instantiation '_OutIt std::copy_if<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>,EmployeeManager::calculateUniqueNames::<lambda_5467abace8177602a8f8a48af18d3266>>(_InIt,_InIt,_OutIt,_Pr)' being compiled
           with
           [
+              _OutIt=std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>,
               _Ty=Employee,
               _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Employee>>>,
-              _Pr=EmployeeManager::calculateFirstNameStarting::<lambda_eb55d1929c2b7128e54ce46e84b315cc>
+              _Pr=EmployeeManager::calculateUniqueNames::<lambda_5467abace8177602a8f8a48af18d3266>
           ]
-  main.cpp
-  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(1403,1): error C2679: binary '=': no operator found which takes a right-hand operand of type 'Employee' (or there is no acceptable conversion)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\iterator(65,1): message : could be 'std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>::operator =(std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &&)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\iterator(65,1): message : or       'std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>::operator =(const std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\iterator(46,40): message : or       'std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\iterator(41,40): message : or       'std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>> &std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\algorithm(1403,1): message : while trying to match the argument list '(std::back_insert_iterator<std::set<std::string,std::less<std::string>,std::allocator<std::string>>>, Employee)'

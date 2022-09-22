@@ -50,8 +50,17 @@ void EmployeeManager::saveToFile(std::string filePath)
 
 int EmployeeManager::calculateFirstNameStarting(char firstLetter)
 {
-	int counter = std::count_if(employees.begin(), employees.end(), [&firstLetter](Employee e) {
-		e.getName()[0] == firstLetter;
+	int counter = std::count_if(employees.begin(), employees.end(), [firstLetter](Employee e) {
+		return e.getName()[0] == firstLetter;
 		});
 	return counter;
+
+}
+
+std::set<std::string> EmployeeManager::calculateUniqueNames()
+{
+	std::set<std::string>uniqueNames;
+	std::copy_if(employees.begin(), employees.end(), std::back_inserter(uniqueNames), [](Employee e) {return e.getName(); });
+	std::for_each(uniqueNames.begin(), uniqueNames.end(), [](std::string str) {std::cout << str << std::endl; });
+	return uniqueNames;
 }

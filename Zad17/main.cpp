@@ -9,5 +9,6 @@ int main() {
     empManager.readDataFromFile("employee_input.csv");
     //empManager.generateLogin();
     //empManager.saveToFile("employees.json");
-   std::cout << empManager.calculateFirstNameStarting('H');
+   //std::cout << empManager.calculateFirstNameStarting('H');
+    empManager.calculateUniqueNames();
 }
