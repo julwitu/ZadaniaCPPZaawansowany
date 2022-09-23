@@ -11,6 +11,9 @@ class CoinToss
 	std::vector<char>OR;
 	int _flips;
 	int generateNumber();
+	void setCounter(int& tmp, int& counter);
+	void printLongestRO();
+	void printLongestOR();
 public:
 	CoinToss(int flips);
 	void tossCoin();
@@ -18,6 +21,7 @@ public:
 	void printPercentage();
 	void printLongestO();
 	void printLongestR();
-	void printLongestOR();
+	void printLongestSequence();
+	
 };
 

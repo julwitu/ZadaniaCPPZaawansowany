@@ -11,6 +11,7 @@ int CoinToss::generateNumber()
     return dist(randomEngine);
 }
 
+
 CoinToss::CoinToss(int flips) :
 	_flips(flips)
 {
@@ -92,38 +93,65 @@ void CoinToss::printLongestR()
     }
     std::cout << counter << std::endl;
 }
-// naprawic
-void CoinToss::printLongestOR()
+
+void CoinToss::setCounter(int& tmp, int& counter)
+{
+    if (tmp > counter) {
+        counter = tmp;
+    }
+    tmp = 0;
+}
+void CoinToss::printLongestRO()
 {
     int counterRO = 0;
     int tmpRO = 0;
-    int counterOR = 0;
-    int tmpOR = 0;
-    for (auto it = OR.begin(); it != OR.end(); it + 2) {
+    for (auto it = OR.begin(); it != OR.end(); it++) {
         if (*it == 'R') {
-            if (*(it++) == 'O' && it++ != OR.end()) {
-                tmpRO++;
-            }
-            else {
-                if (tmpRO > counterRO) {
-                    counterRO = 2*tmpRO;
-                    tmpRO = 0;
+            if (it != (--OR.end())) {
+                std::advance(it, 1);
+                if (*it == 'O') {
+                    tmpRO++;
+                }
+                else {
+                    std::advance(it, -1);
+                    setCounter(tmpRO, counterRO);
                 }
             }
         }
         else {
-            if (*(it++) == 'R' && it++!=OR.end()) {
-                tmpOR++;;
-            }
-            else {
-                if (tmpOR > counterOR) {
-                    counterOR = 2*tmpOR;
-                    tmpOR = 0;
+            setCounter(tmpRO, counterRO);
+        }
+    }
+    setCounter(tmpRO, counterRO);
+    std::cout << "Najdluzszy ciag RO to: " << 2 * counterRO << "char" << std::endl;
+}
+
+void CoinToss::printLongestOR()
+{
+    int counterOR = 0;
+    int tmpOR = 0;
+    for (auto it = OR.begin(); it != OR.end(); it++) {
+        if (*it == 'O') {
+            if (it != (--OR.end())) {
+                std::advance(it, 1);
+                if (*it == 'R') {
+                    tmpOR++;
+                }
+                else {
+                    std::advance(it, -1);
+                    setCounter(tmpOR, counterOR);
                 }
             }
         }
+        else {
+            setCounter(tmpOR, counterOR);
+        }
     }
-    std::cout << counterRO << std::endl;
-    std::cout << counterOR << std::endl;
+    setCounter(tmpOR, counterOR);
+    std::cout << "Najdluzszy ciag OR to: " << 2 * counterOR << "char"<<  std::endl;
 }
 
+void CoinToss::printLongestSequence(){
+    printLongestOR();
+    printLongestRO();
+}

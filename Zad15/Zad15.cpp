@@ -9,7 +9,7 @@
 #include "CoinToss.h"
 int main()
 {
-    CoinToss c(38);
+    CoinToss c(68);
     c.tossCoin();
     c.printResult();
     std::cout << std::endl;
@@ -17,7 +17,8 @@ int main()
     std::cout << std::endl;
     c.printLongestO();
     c.printLongestR();
-    c.printLongestOR();
+    c.printLongestSequence();
+
 }
 
 
