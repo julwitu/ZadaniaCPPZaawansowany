@@ -9,7 +9,7 @@
 #include "CoinToss.h"
 int main()
 {
-    CoinToss c(68);
+    CoinToss c(74);
     c.tossCoin();
     c.printResult();
     std::cout << std::endl;

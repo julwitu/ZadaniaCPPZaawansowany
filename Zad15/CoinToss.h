@@ -14,6 +14,8 @@ class CoinToss
 	void setCounter(int& tmp, int& counter);
 	void printLongestRO();
 	void printLongestOR();
+	int findIndex(std::vector<char> vct, int counter, char c);
+	int findIndex(std::vector<char>vct, int counter, char c1, char c2);
 public:
 	CoinToss(int flips);
 	void tossCoin();

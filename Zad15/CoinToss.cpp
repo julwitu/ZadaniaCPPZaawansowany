@@ -2,6 +2,7 @@
 #include <random>
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
 
 int CoinToss::generateNumber()
 {
@@ -52,10 +53,11 @@ void CoinToss::printPercentage()
             counterR++;
         }
         });
-    auto PercO = (counterO*100) / OR.size();
-    auto PercR = (counterR*100) / OR.size();
-    std::cout << "Liczba O: " << PercO << std::endl;
-    std::cout << "Liczba R: " << PercR << std::endl;
+    double PercO = static_cast<double>(counterO*100) / OR.size();
+    double PercR = static_cast<double>(counterR*100) / OR.size();
+    std::cout << std::setprecision(4);
+    std::cout << "Liczba O: " << PercO  << "%" << std::endl;
+    std::cout << "Liczba R: " << PercR << "%" << std::endl;
 }
 
 void CoinToss::printLongestO()
@@ -67,13 +69,12 @@ void CoinToss::printLongestO()
             tmp++;
         }
         else {
-            if (tmp > counter) {
-                counter = tmp;
-            }
-            tmp = 0;
+            setCounter(tmp, counter);
         }
     }
-    std::cout << counter << std::endl;
+    setCounter(tmp, counter);
+    int index = findIndex(OR, counter, 'O');
+    std::cout << "Najdluzszy ciag O to: " << counter << " char -> index[" << index << "]" << std::endl;
 }
 
 void CoinToss::printLongestR()
@@ -85,13 +86,12 @@ void CoinToss::printLongestR()
             tmp++;
         }
         else {
-            if (tmp > counter) {
-                counter = tmp;
-            }
-            tmp = 0;
+            setCounter(tmp, counter);
         }
     }
-    std::cout << counter << std::endl;
+    setCounter(tmp, counter);
+    int index = findIndex(OR, counter, 'R');
+    std::cout << "Najdluzszy ciag R to: " << counter << " char -> index[" << index << "]" << std::endl;
 }
 
 void CoinToss::setCounter(int& tmp, int& counter)
@@ -100,6 +100,29 @@ void CoinToss::setCounter(int& tmp, int& counter)
         counter = tmp;
     }
     tmp = 0;
+}
+int CoinToss::findIndex(std::vector<char> vct, int counter, char c) {
+    std::string str;
+    std::copy(vct.begin(), vct.end(), std::back_inserter(str));
+    std::string longest = std::string(counter, c);
+    int index = str.find(longest);
+    return index;
+}
+int CoinToss::findIndex(std::vector<char> vct, int counter, char c1, char c2)
+{
+    std::string str;
+    std::copy(vct.begin(), vct.end(), std::back_inserter(str));
+    std::string longest;
+    for (int i = 0; i < 2 * counter; i++) {
+        if (i % 2 == 0) {
+            longest.push_back(c1);
+        }
+        else {
+            longest.push_back(c2);
+        }
+    }
+    int index = str.find(longest);
+    return index;
 }
 void CoinToss::printLongestRO()
 {
@@ -123,7 +146,8 @@ void CoinToss::printLongestRO()
         }
     }
     setCounter(tmpRO, counterRO);
-    std::cout << "Najdluzszy ciag RO to: " << 2 * counterRO << "char" << std::endl;
+    int index = findIndex(OR, counterRO, 'R', 'O');
+    std::cout << "Najdluzszy ciag RO to: " << 2 * counterRO << "char -> index[" << index<< "]" << std::endl;
 }
 
 void CoinToss::printLongestOR()
@@ -148,7 +172,8 @@ void CoinToss::printLongestOR()
         }
     }
     setCounter(tmpOR, counterOR);
-    std::cout << "Najdluzszy ciag OR to: " << 2 * counterOR << "char"<<  std::endl;
+    int index = findIndex(OR, counterOR, 'O', 'R');
+    std::cout << "Najdluzszy ciag OR to: " << 2 * counterOR << "char -> index["<< index << "]"<<  std::endl;
 }
 
 void CoinToss::printLongestSequence(){
